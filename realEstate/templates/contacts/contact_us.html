@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} | Contact Us{% endblock title %}
+
+{% block content %}
+<section class="section-content padding-y home">
+    <div class="card mx-auto" style="max-width:520px; margin-top:40px">
+        <div class="row card-body">
+                <form class="contact-form" method="post">
+                    {% csrf_token %}
+                    <h2 class="text-center">Contact Us</h2>
+                    {{ form.as_p }}
+                    <input type="submit" value="Send" class="btn btn-primary btn-block">
+                </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

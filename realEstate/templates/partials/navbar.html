@@ -1,0 +1,60 @@
+{% load static %}
+<!-- Spinner Start -->
+<div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+<!-- Spinner End -->
+<div class="container-fluid nav-bar bg-transparent">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a href="#" class="navbar-brand d-flex align-items-center text-center">
+            <div class="icon p-2 me-2">
+                <img class="img-fluid" src="{% static 'images/icon-deal.png' %}" alt="Icon" style="width: 30px; height: 30px;">
+            </div>
+            <h2 class="m-0 text-primary">Froden Real Estate Agency</h2>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            {% if user.is_authenticated %}
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Property</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="{% url 'listings' %}">Property Listings</a>
+                        <a class="dropdown-item" href="{% url 'agents' %}">Property Agents</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="{% url 'terms' %}">Terms & Conditions</a>
+                        <a class="dropdown-item" href="{% url 'testimonials' %}">Testimonials</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact_us' %}">Contact Us</a>
+                </li>
+            </ul>
+            <div class="d-flex justify-content-end">
+                <a href="{% url 'accounts:logout' %}" class="btn btn-outline-success ml-auto my-2 my-sm-0">Logout</a>
+            </div>
+            {% else %}
+                <div class="d-flex justify-content-end">
+                    <a href="{% url 'accounts:signup' %}" class="btn btn-outline-success ml-auto my-2 my-sm-0">Sign Up</a>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <a href="{% url 'accounts:login' %}" class="btn btn-outline-success ml-auto my-2 my-sm-0">Login</a>
+                </div>
+            {% endif %}
+        </div>
+    </nav>
+</div>

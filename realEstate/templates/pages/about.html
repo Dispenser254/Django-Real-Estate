@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} | About{% endblock title %}
+
+{% block content %}
+<section id="showcase-inner" class="py-5 text-black">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-12">
+                <h2 class="display-5">Our Services</h2>
+                <p class="lead">At Froden Real Estate Agency, we provide a range of services to help our clients buy, sell, or rent property. Our experienced team of real estate professionals is dedicated to providing personalized, high-quality service to meet the unique needs of each of our clients.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--=================== BREADCRUMBS =====================-->
+<section id="bc" class="mt-3">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="{% url 'index' %}">
+                        <i class="fas fa-home">Home</i>
+                    </a>
+                </li>
+                <li class="breadcrumb-item active">About</li>
+            </ol>
+        </nav>
+    </div>
+</section>
+<!--================= BREADCRUMBS ENDS =====================-->
+
+<!-- About Start -->
+<section class="section-content padding-y">
+    <h2 class="text-center" style="margin-bottom: 20px; font-size: 40px;">Services Offered by Froden Real Estate Agency</h2>
+    <p class="text-center" style="font-size: 25px;">
+    <strong>Introduction</strong> <br>
+    At Froden Real Estate Agency, we provide a range of services to help our clients buy, sell, or rent property. Our experienced team of real estate professionals is dedicated to providing personalized, high-quality service to meet the unique needs of each of our clients.
+    <br><br>
+    <strong>Services</strong> <br>
+    <strong>Property Listings:</strong> We offer a wide selection of property listings on our website, including residential and commercial properties, as well as land and lots. Our listings are updated regularly to ensure the most accurate and up-to-date information is available.
+    <br>
+    <strong>Property Valuation:</strong> Our team of experts provides accurate and reliable property valuation services. We use a range of valuation methods to determine the fair market value of a property, including comparable sales analysis, income capitalization, and replacement cost analysis.
+    <br>
+    <strong>Buyer Representation:</strong> We work with buyers to find the right property that meets their unique needs and budget. Our team provides expert guidance throughout the buying process, from identifying properties to negotiating offers and closing deals.
+    <br>
+    <strong>Seller Representation:</strong> We work with sellers to effectively market and sell their properties. Our team uses a range of marketing tools and strategies to ensure that properties are visible to potential buyers, and we provide expert guidance throughout the selling process, from setting prices to negotiating offers and closing deals.
+    <br>
+    <strong>Property Management:</strong> We offer property management services to help property owners manage their rental properties. Our services include rent collection, tenant screening, property maintenance, and lease agreements.
+    <br><br>
+    <strong>Conclusion</strong><br>
+    At Froden Real Estate, we are committed to providing exceptional service to our clients. Whether you are looking to buy, sell, or rent property, we have the expertise and resources to help you achieve your goals. Contact us today to learn more about our services and how we can help you.
+    </p>
+</section>
+
+<!-- Call to Action Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="bg-light rounded p-3">
+            <div class="bg-white rounded p-4" style="border: 1px dashed rgba(0, 185, 142, .3)">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                        <img class="img-fluid rounded w-100" src="{% static 'images/call-to-action.jpg' %}" alt="">
+                    </div>
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                        <div class="mb-4">
+                            <h1 class="mb-3">Contact With Our Certified Agent</h1>
+                            <p>Eirmod sed ipsum dolor sit rebum magna erat. Tempor lorem kasd vero ipsum sit sit diam justo sed vero dolor duo.</p>
+                        </div>
+                        <a href="{% url 'contact_us' %}" class="btn btn-primary py-3 px-4 me-2"><i class="fa fa-phone-alt me-2"></i>Make A Call</a>
+                        <a href="{% url 'contact_us' %}" class="btn btn-dark py-3 px-4"><i class="fa fa-calendar-alt me-2"></i>Get Appoinment</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Call to Action End -->
+{% endblock content %}

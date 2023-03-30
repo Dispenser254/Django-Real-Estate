@@ -1,0 +1,13 @@
+{% extends 'admin/base.html' %}
+{% load static %}
+
+{% block branding %}
+<h1 id="head">
+    <img src="{% static 'images/icon-deal.png' %}" alt="Froden Real Estate" height="30" width="50" class="brand_img"><strong>Froden Real Estate Agency</strong>
+</h1>
+{% endblock branding %}
+
+
+{% block extrastyle %}
+<link rel="stylesheet" href="{% static 'css/admin.css' %}">
+{% endblock extrastyle %}
