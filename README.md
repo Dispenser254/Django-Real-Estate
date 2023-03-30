@@ -20,20 +20,24 @@ Bootstrap: A popular front-end framework for building responsive and mobile-firs
 
 SQLite3: A powerful open-source relational database management system.
 
-## Getting Started
-To run this application locally, follow these steps:
+## Installation
+Clone the repository: git clone https://github.com/Dispenser254/Django-Real-Estate.git
 
-Clone this repository.
+Create a virtual environment: python3 -m venv env
 
-Create a virtual environment and activate it.
+Activate the virtual environment: source env/bin/activate
 
-Install the required packages by running pip install -r requirements.txt.
+Install the required dependencies: pip install -r requirements.txt
 
-Set up a PostgreSQL database and configure it in settings.py.
+Create the database tables: python manage.py migrate
 
-Run the migrations by running python manage.py migrate.
+Create a superuser account: python manage.py createsuperuser
 
-Run the development server by running python manage.py runserver.
+Start the development server: python manage.py runserver
+
+The application is now available at http://localhost:8000/ in your web browser.
+
+
 
 ## Contributing
 Contributions are welcome! If you find a bug or have a feature request, please open an issue. If you want to contribute code, please open a pull request with your changes.
